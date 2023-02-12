@@ -91,11 +91,12 @@ public class Main {
     }
 
     public static void healOneHero() {
-        while (heroesHealth[3] > 0) {
+        if (heroesHealth[3] > 0) {
             if (heroesHealth[0] < 100) {
                 heroesHealth[0] = heroesHealth[0] + 100;
+            } else if (heroesHealth[3] < 0) {
+                heroesHealth[3] = 0;
             }
-            return;
         }
     }
 }
